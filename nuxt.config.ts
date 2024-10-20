@@ -16,4 +16,8 @@ export default defineNuxtConfig({
     pages: 'pages',           
     static: 'static',         
   },
-});
+  components: true, // Se habilitado, o Nuxt deve carregar automaticamente os componentes
+},
+
+
+);
