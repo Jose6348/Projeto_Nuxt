@@ -10,10 +10,15 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@mdi/font": "^7.4.47",
+    "@nuxtjs/vuetify": "^1.12.3",
     "nuxt": "^3.13.0",
+    "sass": "^1.80.3",
+    "sass-loader": "^16.0.2",
     "vue": "latest",
     "vue-router": "latest",
-    "vuetify": "^3.7.0-beta.1"
+    "vuetify": "^3.7.3"
+  },
+  "devDependencies": {
+    "@mdi/font": "^7.4.47"
   }
 }

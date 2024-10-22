@@ -1,45 +1,49 @@
 <template>
-  <nav class="top-bar">
-    <!-- Logo e Título -->
-    <div class="top-bar-left">
-      <img
-        src="static/TopBar.vue/95a2db9e-f031-479c-bca9-2e9740a3d0c9.jpg"
-        alt="Imagem Mayday"
-        class="logo-img"
-      />
-      <span class="top-bar-title">Zezinho's Site</span>
-    </div>
+  <v-row class="top-bar">
+    <v-col cols="4">
+      <!-- Logo e Título -->
+      <div class="top-bar-left">
+        <img
+          src="~/assets/images/95a2db9e-f031-479c-bca9-2e9740a3d0c9.jpg"
+          alt="Imagem Mayday"
+          class="logo-img"
+        />
+        <span class="top-bar-title">Zezinho's Site</span>
+      </div>
+    </v-col>
 
     <!-- Barra de Pesquisa -->
-    <div class="top-bar-center">
-      <input type="text" class="search-bar" placeholder="Pesquisar..." />
-    </div>
+    <v-col cols="4">
+      <div class="top-bar-center">
+        <input type="text" class="search-bar" placeholder="Pesquisar..." />
+      </div>
+    </v-col>
 
     <!-- Ícones de Ação -->
-    <div class="top-bar-right">
-      <i class="mdi mdi-bell"></i>
-      <i class="mdi mdi-account ml-3"></i>
-    </div>
-  </nav>
+    <v-col cols="4">
+      <div class="top-bar-right">
+        <i class="mdi mdi-bell"></i>
+        <i class="mdi mdi-account ml-3"></i>
+      </div>
+    </v-col>
+  </v-row>
 </template>
 
 <script setup>
 </script>
 
 <style scoped>
-/* Estilos da TopBar */
 .top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #141414; /* Cor de fundo */
-  color: white; /* Cor do texto */
+  background-color: #141414; 
+  color: white; 
   padding: 10px 20px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
-  height: 70px; /* Define uma altura fixa para a barra */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); 
+  height: auto; 
 }
 
-/* Seção da logo e título */
 .top-bar-left {
   display: flex;
   align-items: center;
@@ -56,9 +60,8 @@
   font-weight: bold;
 }
 
-/* Barra de pesquisa */
 .top-bar-center {
-  flex: 1; /* Ocupa o espaço restante no centro */
+  flex: 1; 
   display: flex;
   justify-content: center;
 }
@@ -74,20 +77,21 @@
   color: black;
 }
 
-/* Ícones à direita */
 .top-bar-right {
   display: flex;
   gap: 20px;
+  align-content: right;
 }
 
 .top-bar-right i {
   font-size: 24px;
   cursor: pointer;
   color: white;
+  align-content: flex-end;
 }
 
 .top-bar-right i:hover {
-  color: #f1c40f; /* Muda a cor ao passar o mouse */
+  color: #f1c40f; 
 }
 </style>
 

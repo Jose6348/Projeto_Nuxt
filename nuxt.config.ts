@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from 'nuxt/config';
+import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
@@ -10,14 +10,14 @@ export default defineNuxtConfig({
     baseURL: process.env.BASE_URL || '',
   },
   css: ['~/assets/css/main.css'],
-  dir: {
-    layouts: 'layouts',       
-    middleware: 'middleware', 
-    pages: 'pages',           
-    static: 'static',         
+
+  build: {
+    transpile: ['vuetify'],
   },
-  components: true, // Se habilitado, o Nuxt deve carregar automaticamente os componentes
-},
 
-
-);
+  vite: {
+    define: {
+      'process.env.DEBUG': false,
+    },
+  },
+})
